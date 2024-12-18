@@ -1,0 +1,71 @@
+// Header.module.scss
+
+$primary-color: #e74c3c; // Accent red color
+$background-color: #ffffff; // White background
+$text-color: #333333; // Dark text
+$scrolled-bg: #2c3e50; // Darker background on scroll
+$link-hover-color: #e67e22; // Orange hover effect
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $background-color;
+  color: $text-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+
+  // Scrolled effect
+  &.scrolled {
+    background-color: $scrolled-bg;
+    color: #ffffff; // White text when scrolled
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    .header-title {
+      color: #ffffff; // White title text
+    }
+
+    .header-nav a {
+      color: #ffffff;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  .header-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $primary-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}

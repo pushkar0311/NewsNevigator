@@ -1,0 +1,48 @@
+// About.module.scss
+
+main {
+    padding: 2rem;
+    background-color: #f9f9f9; // Light gray background
+    color: #333; // Dark text for readability
+    font-family: 'Arial, Helvetica, sans-serif';
+    line-height: 1.6;
+    text-align: center;
+  
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50; // Deep navy blue for headings
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+  
+      // Underline effect
+      &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 4px;
+        background-color: #e74c3c; // Red accent underline
+        margin: 0.5rem auto 0;
+      }
+    }
+  
+    p {
+      font-size: 1.2rem;
+      color: #555; // Subtle gray for paragraph text
+      margin: 1rem auto;
+      max-width: 700px;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    // Add a light shadow and rounded edges to make the section pop
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 900px;
+  }
+  

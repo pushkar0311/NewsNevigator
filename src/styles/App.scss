@@ -1,0 +1,98 @@
+/* App.scss */
+
+/* Apply a base font size, color, and background for the entire app */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ecf0f1; /* Light background for the app */
+  color: #2c3e50; /* Text color */
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Main container to hold all content */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px; /* Ensure space for sticky header */
+}
+
+/* Style for main content area */
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #ffffff; /* White background for content area */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 100px; /* Space under the sticky header */
+}
+
+/* Global style for headings to make them more consistent */
+h1, h2, h3 {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Ensuring there's space for the content to flow properly */
+main {
+  display: block;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make sure the body has enough padding for content visibility */
+body {
+  padding-top: 80px; /* Adjust the padding for sticky header visibility */
+  background-color: #f4f6f8;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Global styling for links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Fix any global container overflow issues */
+.container {
+  overflow: hidden;
+}
+
+/* Ensures no unwanted scrollbars appear */
+html, body {
+  height: 100%;
+}
+
+/* Add margins/padding to prevent content overlap */
+main {
+  padding: 30px 20px;
+}
+
+@media (max-width: 768px) {
+  /* For smaller devices, make the padding and margins smaller */
+  body {
+    padding-top: 60px;
+  }
+
+  .app-container {
+    width: 100%;
+    padding: 15px;
+  }
+}
