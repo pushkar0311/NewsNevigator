@@ -20,11 +20,12 @@ function Header() {
 
   return (
     <header className={`header ${scrolling ? 'scrolled' : ''}`}>
-      <h1 className="header-title">News App</h1>
+      <h1 className="header-title">NewsNavigator</h1>
       <nav className="header-nav">
         <Link to="/">Home</Link>
         <Link to="/news">News</Link>
         <Link to="/about">About</Link>
+        <Link to="/bookmarked">Bookmarked</Link> {/* New Link */}
       </nav>
     </header>
   );
